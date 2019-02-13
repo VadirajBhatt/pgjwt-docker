@@ -1,10 +1,11 @@
-FROM postgres:$PG_MAJOR
+ARG PG_VERSION=latest
+FROM postgres:${PG_VERSION}
 
 ENV POSTGRES_EXTENSION_SCHEMA=public
 
 RUN set -eux; \
 	apt-get update; \
-	apt-get install -y --no-install-recommends make git postgresql-server-dev-$PG_MAJOR; \
+	apt-get install -y --no-install-recommends ca-certificates make git postgresql-server-dev-$PG_MAJOR; \
 	apt-get clean; \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
