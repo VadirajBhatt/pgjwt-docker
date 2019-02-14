@@ -8,7 +8,7 @@ export PGUSER="$POSTGRES_USER"
 
 # Load pgjwt into $POSTGRES_DB
 for DB in "$POSTGRES_DB"; do
-	echo "Loading pgjwt & pgagent extensions into $DB"
+	echo "Loading pgcrypto and pgjwtt extensions into $DB"
 	"${psql[@]}" --dbname="$DB" <<-'EOSQL'
 		CREATE EXTENSION IF NOT EXISTS pgcrypto;
 		CREATE EXTENSION IF NOT EXISTS pgjwt;
