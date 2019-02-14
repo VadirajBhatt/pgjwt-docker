@@ -1,5 +1,4 @@
-ARG PG_VERSION=latest
-FROM postgres:${PG_VERSION}
+FROM postgres:11
 
 ENV POSTGRES_EXTENSION_SCHEMA=public
 
