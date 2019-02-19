@@ -1,7 +1,5 @@
 FROM postgres
 
-ENV POSTGRES_EXTENSION_SCHEMA=public
-
 RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends ca-certificates make git postgresql-server-dev-$PG_MAJOR; \
