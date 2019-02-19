@@ -1,4 +1,4 @@
-FROM postgres:11
+FROM postgres
 
 ENV POSTGRES_EXTENSION_SCHEMA=public
 
